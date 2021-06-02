@@ -1,0 +1,16 @@
+
+public class ContaPoupanca extends Conta {
+
+	public ContaPoupanca(int agencia, int numero) {
+		super(agencia, numero); 
+	}
+	
+	@Override
+	public void deposita(double valor) {
+		if(valor>0) {
+			super.saldo += valor;
+		}else {
+			System.out.println("O valor de deposito não pode ser negativo");
+		}
+	}
+}
